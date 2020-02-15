@@ -17,6 +17,10 @@ module.exports = {
       },
       petsList(_, __,context){
           return context.models.Pet.findMany()
+      },
+      //input comes from schema
+      onePet(_, {input}, context){
+          return context.models.Pet.findOne(input)
       }
       
     },
