@@ -16,10 +16,16 @@ const typeDefs = gql`
       name: String!
       type: String!
   }
+  input PetInput{
+      id:ID
+      name:String
+      type:String
+  }
 
   type Query{
       userList: User
       petsList: [Pet]!
+      onePet(input: PetInput ):Pet
   }
 
 `;
